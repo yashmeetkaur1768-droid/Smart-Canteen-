@@ -1,0 +1,14 @@
+node_modules
+frontend/dist
+frontend/node_modules
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+cpp/engine.exe
+.git
+.gitignore
+.env
+.env.*
+.DS_Store
+Thumbs.db

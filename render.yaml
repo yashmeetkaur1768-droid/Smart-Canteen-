@@ -1,0 +1,26 @@
+# Render Blueprint Specification for Smart Canteen Backend
+# Documentation: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: smart-canteen-backend
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /api/health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://<YOUR-VERCEL-APP-NAME>.vercel.app
+      - key: DATABASE_PATH
+        value: /data/canteen.db
+      - key: DEBUG
+        value: "false"
+    # Note: Persistent disks require a paid Render instance ($7/mo+).
+    # On the free tier, remove or comment out the 'disk' block below;
+    # SQLite will store data in the container's ephemeral filesystem (/data or /app/database/canteen.db).
+    disk:
+      name: canteen-data
+      mountPath: /data
+      sizeGB: 1

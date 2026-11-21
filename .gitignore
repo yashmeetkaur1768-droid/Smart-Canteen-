@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Production build outputs
+dist/
+frontend/dist/
+
+# Python byte code & cache
+__pycache__/
+backend/__pycache__/
+backend/routes/__pycache__/
+tests/__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# C++ compiled binaries
+cpp/engine.exe
+cpp/engine
+*.exe
+*.o
+*.obj
+
+# SQLite persistent database (recreated on deploy / seed)
+database/canteen.db
+*.db
+*.sqlite3
+
+# Environment & secrets
+.env
+.env.*
+.venv/
+venv/
+ENV/
+
+# IDE & OS cache
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.pytest_cache/
+.coverage
+htmlcov/
